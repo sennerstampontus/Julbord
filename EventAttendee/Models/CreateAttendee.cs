@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace EventAttendee.Models
 {
+
+
        public class CreateAttendee
     {
         public Guid Id { get; set; } = Guid.NewGuid();
