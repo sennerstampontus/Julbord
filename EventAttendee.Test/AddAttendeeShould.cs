@@ -6,6 +6,7 @@ namespace EventAttendee.Test
     public class AddAttendeeShould
     {
         private AttendeeHandler _sut = new AttendeeHandler();
+
         //Byts till önskad målplats för testfilen
         
         string filePath = "C:\\Users\\Kappa\\Documents\\Programing\\C#\\Julbord\\Julbord\\test.txt";
