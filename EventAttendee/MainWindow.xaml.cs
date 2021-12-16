@@ -20,15 +20,6 @@ using System.Windows.Shapes;
 
 namespace EventAttendee
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    
-    
-
-
-
-
     public partial class MainWindow : Window
     {
 
@@ -52,7 +43,7 @@ namespace EventAttendee
             if (!string.IsNullOrEmpty(tbFirstName.Text) && !string.IsNullOrEmpty(tbLastName.Text) && !string.IsNullOrEmpty(tbEmail.Text))
             {
                 // See info om AddAttendeeAsync i summary
-                await _atts.AddAttendeeAsync(path, tbFirstName.Text, tbLastName.Text, tbEmail.Text, tbAllergies.Text);
+                await _atts.AddAttendeeAsync(lvAttendees, path, tbFirstName.Text, tbLastName.Text, tbEmail.Text, tbAllergies.Text);
             }
             tbFirstName.Text = "";
             tbLastName.Text = "";
@@ -76,4 +67,3 @@ namespace EventAttendee
         }
     }
 }
-

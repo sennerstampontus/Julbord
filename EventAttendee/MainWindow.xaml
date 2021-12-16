@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EventAttendee"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1200" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="800" Width="1500" WindowStartupLocation="CenterScreen">
     <Grid Background="#738290" >
         <Grid Margin="20" >
             
             <!--Base grid and definition-->
             <Grid.ColumnDefinitions >
-                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
             <Border BorderBrush="#5c6873" BorderThickness="0 0 3 0">
@@ -72,7 +72,7 @@
                 <Border Grid.Row="1" BorderBrush="#5c6873" BorderThickness="0 0 0 2" Margin="40 0 40 40">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
@@ -90,7 +90,7 @@
                                 <Grid Margin="0 0 0 30" >
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
                                     <StackPanel Grid.Column="0">
@@ -99,7 +99,7 @@
                                         <TextBlock Text="{Binding Email}"  FontSize="16" FontFamily="Roboto" FontWeight="Normal" Foreground="#C2D8B9" Padding="7 0 0 0" />
                                         <StackPanel Orientation="Horizontal">
                                             <!--Styling Cupon button-->
-                                            <ToggleButton FontSize="10" Click="btnCupon_Click" Margin="10 5 0 0" >
+                                            <ToggleButton FontSize="10" Click="btnCupon_Click" Margin="8 5 0 0" >
                                                 <ToggleButton.Style>
                                                     <Style TargetType="{x:Type ToggleButton}">
                                                         <Setter Property="Template">

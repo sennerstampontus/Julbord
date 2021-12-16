@@ -1,0 +1,5 @@
+C:\Users\Kappa\Documents\Programing\C#\Julbord\Julbord\EventAttendee.exe
+C:\Users\Kappa\Documents\Programing\C#\Julbord\Julbord\EventAttendee.dll
+C:\Users\Kappa\Documents\Programing\C#\Julbord\Julbord\EventAttendee.deps.json
+C:\Users\Kappa\Documents\Programing\C#\Julbord\Julbord\EventAttendee.runtimeconfig.json
+C:\Users\Kappa\Documents\Programing\C#\Julbord\Julbord\EventAttendee.pdb

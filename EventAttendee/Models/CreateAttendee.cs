@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace EventAttendee.Models
 {
-
-
        public class CreateAttendee
     {
         public Guid Id { get; set; } = Guid.NewGuid();
@@ -17,7 +15,7 @@ namespace EventAttendee.Models
         public string Allergies { get; set; }
         public Guid CreateCupon { get; set; } = Guid.NewGuid();
 
-        public string Cupon => $"Rabattkod:{Id.ToString("N").Substring(0,4)}";
+        public string Cupon => $"Rabattkod: {Id.ToString("N").Substring(0,4)}";
 
         public string FullName => $"{FirstName} {LastName}";
 

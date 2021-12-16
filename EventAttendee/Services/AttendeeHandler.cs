@@ -25,9 +25,13 @@ namespace EventAttendee.Services
         /// <param name="_email"></param>
         /// <param name="_allergies"></param>
         /// <returns></returns>
-        public async Task AddAttendeeAsync(string _path, string _firstName, string _lastName, string _email, string _allergies)
+        public async Task AddAttendeeAsync(ItemsControl quickLv, string _path, string _firstName, string _lastName, string _email, string _allergies)
         {
-            CreateAttendee newAttendee = new CreateAttendee { FirstName = _firstName, LastName = _lastName, Email = _email, Allergies = _allergies ?? "Inga allergier angivna" };
+            CreateAttendee newAttendee = new CreateAttendee { FirstName = _firstName.Trim(), LastName = _lastName.Trim(), Email = _email.Trim(), Allergies = _allergies.Trim() };
+            if(_allergies == null || _allergies == "")
+            {
+                newAttendee.Allergies = "Inga allergier angivna";
+            }
 
             string person = $"{newAttendee.Id}, {newAttendee.FirstName}, {newAttendee.LastName}, {newAttendee.Email}, {newAttendee.Allergies}";
             attendee.Add(newAttendee);
@@ -38,6 +42,7 @@ namespace EventAttendee.Services
                 {
                     sw.WriteLine(person);
                 }
+                quickLv.ItemsSource = attendee;
             }
             else
             {
