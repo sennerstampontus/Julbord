@@ -17,10 +17,10 @@ namespace EventAttendee.Models
         public string Allergies { get; set; }
         public Guid CreateCupon { get; set; } = Guid.NewGuid();
 
-        public string Cupon => $"Kupong:{Id.ToString("N").Substring(0,4)}";
+        public string Cupon => $"Rabattkod:{Id.ToString("N").Substring(0,4)}";
 
         public string FullName => $"{FirstName} {LastName}";
 
-        public string CuponStatus => "Kupong skickad";
+        public string CuponStatus => "Rabattkupong skickad";
     }
 }

@@ -32,20 +32,19 @@ namespace EventAttendee
     public partial class MainWindow : Window
     {
 
-        
         private AttendeeHandler _atts = new AttendeeHandler();
         
         //Ändras till önskad plats där filen ska sparas.
+
         public string path = @"C:\Users\Kappa\Documents\Programing\C#\Julbord\Julbord\Attendees.txt";
 
-        
-
-   
+        //
+    
         public MainWindow()
         {
             InitializeComponent();
 
-            // See info om GetAttendeesAsync i summary
+            // See info om GetAttendeesAsync() i summary
             Task.FromResult(_atts.GetAttendeesAsync(path, lvAttendees)); 
         }
         private async void Submit_Click(object sender, RoutedEventArgs e)
@@ -63,7 +62,7 @@ namespace EventAttendee
 
         private void btnCupon_Click(object sender, RoutedEventArgs e)
         {
-           
+            
         }
 
         private async void btnDelete_Click(object sender, RoutedEventArgs e)

@@ -49,7 +49,7 @@ namespace EventAttendee.Services
         }
 
         /// <summary>
-        /// GetAttendeesAsync hämtar och uppdaterar grafiska listan utifrån textfilens innehåll från start.
+        /// <para>GetAttendeesAsync läser in listan från textfilen och lägger till i {<see cref="attendee"/>.}</para>
         /// </summary>
         /// <param name="path"></param>
         /// <param name="patchLV"></param>
@@ -66,23 +66,24 @@ namespace EventAttendee.Services
                 }
             }
 
-             fetchData(patchLV);
+             FetchData(patchLV);
         }
 
         /// <summary>
-        /// fetchData metoden används för att gå runt "buggen" att listan inte läses in från start<br></br>
-        /// Och initieras från GetAttendeesAsync() <br></br>
-        /// För att helt eliminera försök att skriva ut listan innan hämtning.
+        /// <para>FetchData metoden används för att gå runt "buggen" att listan inte läses in från start<br></br>
+        /// Uppdaterar {<see cref="attendee"/>} med den inlästa listan från textfilen.<br></br>
+        /// Och initieras från {<seealso cref="GetAttendeesAsync(string, ItemsControl)"/>} <br></br>
+        /// För att helt eliminera försök att skriva ut listan innan hämtning.</para>
         /// <example>
         /// <code>
         ///     if(attendee.Count > 0)
-        ///     {lvAttendee.ItemsSource = attendee;}
+        ///         lvAttendee.ItemsSource = attendee;
         /// </code>
         /// </example>
         /// </summary>
         /// <param name="_patchLv"></param>
         /// <returns></returns>
-        private object fetchData(ItemsControl _patchLv)
+        private object FetchData(ItemsControl _patchLv)
         {
             _patchLv.ItemsSource = attendee;
 
@@ -90,10 +91,9 @@ namespace EventAttendee.Services
         }
 
         /// <summary>
-        /// DeleteAttendee metoden används för att ta bort önskad registrering från textfilen<br></br>
-        /// Det gör den genom att läsa in befintlig lista och kolla gentemot Id:n om den ska sparas eller inte<br></br>
-        /// Sedan tar den och sparar restan av registreringarna i en temporär Collection, <br></br>
-        /// tar bort filen, och skriver den på nytt med värdena från temporära listan.
+        /// <para>DeleteAttendeeAsync<br></br>
+        /// Sparar de registreringar som ska vara kvar i en tempList<br></br>
+        /// tar bort den gamla filen och ersätter med en ny och korrekt fil.</para>
         /// </summary>
         /// <param name="item"></param>
         /// <param name="path"></param>
