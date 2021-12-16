@@ -17,7 +17,7 @@ namespace EventAttendee.Test
         public void Add_New_Attendee()
         {
             //Prep
-            var _attendee = new Attendee() { Id = System.Guid.NewGuid(), FirstName = "Pontus", LastName = "Sennerstam", Email = "pontus@domain.com", Allergies = "Inga angivna"};
+            var _attendee = new Attendee() { Id = Guid.NewGuid(), FirstName = "Pontus", LastName = "Sennerstam", Email = "pontus@domain.com", Allergies = "Inga angivna"};
 
             //Act
             var _addsAttendee = _sut.AddToList(_attendee);
@@ -30,7 +30,7 @@ namespace EventAttendee.Test
         public void Remove_New_Attendee()
         {
             //Prep
-            var _attendee = new Attendee() { Id = System.Guid.NewGuid(), FirstName = "Pontus", LastName = "Sennerstam", Email = "pontus@domain.com", Allergies = "Inga angivna" };
+            var _attendee = new Attendee() { Id = Guid.NewGuid(), FirstName = "Pontus", LastName = "Sennerstam", Email = "pontus@domain.com", Allergies = "Inga angivna" };
             _sut.AddToList(_attendee);
 
             //Act

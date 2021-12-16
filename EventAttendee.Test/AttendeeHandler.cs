@@ -5,12 +5,8 @@ using System.IO;
 namespace EventAttendee.Test
 {
 
-
-
     internal class AttendeeHandler
     {
-
-
 
         List<Attendee> AttendeeList = new List<Attendee>();
 
